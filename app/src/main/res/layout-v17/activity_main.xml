@@ -9,7 +9,8 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="xhydew.buses.MainActivity"
-    android:background="@android:color/holo_blue_light">
+    android:background="@android:color/holo_blue_light"
+    android:id="@+id/Main_Relative">
 
     <TextView
         android:layout_width="wrap_content"
@@ -19,12 +20,10 @@
         android:id="@+id/Main_Texto_1"
         android:layout_alignParentTop="true"
         android:textColor="@color/abc_primary_text_material_dark"
-        android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:textAlignment="center"
-        android:layout_above="@+id/button" />
+        android:layout_above="@+id/Main_chronometer" />
 
     <Button
         android:layout_width="wrap_content"
@@ -47,5 +46,17 @@
         android:editable="true"
         android:textColor="@color/abc_primary_text_material_dark"
         android:layout_alignParentBottom="true"
-        android:textAlignment="textEnd" />
+        android:textAlignment="textEnd"
+        android:textIsSelectable="true"
+        android:selectAllOnFocus="true" />
+
+    <Chronometer
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Main_chronometer"
+        android:layout_above="@+id/button"
+        android:layout_alignRight="@+id/Main_Texto_1"
+        android:layout_alignEnd="@+id/Main_Texto_1"
+        android:textSize="45dp"
+        android:textColor="@color/abc_primary_text_material_dark" />
 </RelativeLayout>
